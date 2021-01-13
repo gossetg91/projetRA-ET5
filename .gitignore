@@ -9,7 +9,7 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Mm]emoryCaptures/
-/[Aa]ssets/*/*.meta
+/[Aa]ssets/**/*.meta
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
