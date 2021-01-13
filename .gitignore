@@ -6,6 +6,10 @@
 [Bb]uild
 /[Bb]uilds/
 /[Ll]ibrary/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Aa]ssets/**/*.meta
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
@@ -29,7 +33,34 @@ sysinfo.txt
 .consulo/
 /*.tmp
 /*.svd
+/[Aa]ssets/Plugins/Editor/JetBrains*
  
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/
+
+# Jetbrains
+/.idea/
+
+# Misc
+/QCAR/
+
 # ============ #
 # OS generated #
 # ============ #
