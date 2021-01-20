@@ -14,6 +14,8 @@ public class diceRoller : MonoBehaviour
     private float timer;
     private float visualTime;
 
+    private int score;
+
     void Start()
     {
         x = 0.0f;
@@ -37,7 +39,8 @@ public class diceRoller : MonoBehaviour
             visualTime = timer;
 
             timer = timer - waitTime;
-            ChooseFace(Random.Range(1,7));
+            this.score = Random.Range(1,7);
+            ChooseFace(score);
             stop = true;
         }
     }
@@ -84,5 +87,9 @@ public class diceRoller : MonoBehaviour
         }
 
         transform.localRotation = Quaternion.Euler(x, 0, y);
+    }
+
+    public int getScore(){
+        return score;
     }
 }

@@ -6,6 +6,8 @@ using Vuforia;
 public class virtualButtonEvent : MonoBehaviour
 {
     public GameObject vbBtnObj;
+    public GameObject dice1;
+    public GameObject dice2;
 
     // Start is called before the first frame update
     void Start()
@@ -13,13 +15,15 @@ public class virtualButtonEvent : MonoBehaviour
         vbBtnObj = GameObject.Find("diceButton");
         vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
         vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
-        Debug.Log("heyyyyyyyyyyyyyyy");
     }
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         Debug.Log("Button Pressed");
-        vbBtnObj.Get<>();
+        diceRoller diceRollerScript1 = dice1.GetComponent<diceRoller>();
+        diceRoller diceRollerScript2 = dice2.GetComponent<diceRoller>();
+        diceRollerScript1.stop = false;
+        diceRollerScript2.stop = false;
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
