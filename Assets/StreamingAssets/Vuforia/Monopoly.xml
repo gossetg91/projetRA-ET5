@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="diceTage" size="0.060000 0.060000" />
+    <ImageTarget name="chanceTag" size="0.085000 0.055250" />
+    <ImageTarget name="communityChestTag" size="0.085000 0.055250" />
+    <ImageTarget name="carTag" size="0.060000 0.060000" />
+    <ImageTarget name="ironTag" size="0.060000 0.060000" />
+    <ImageTarget name="thimbleTag" size="0.060000 0.060000" />
+    <ImageTarget name="dogTag" size="0.060000 0.060000" />
+    <ImageTarget name="shoeTag" size="0.060000 0.060000" />
+    <ImageTarget name="hatTag" size="0.060000 0.060000" />
+    <ImageTarget name="wheelbarrowTag" size="0.060000 0.060000" />
+    <ImageTarget name="boatTag" size="0.060000 0.060000" />
+    <ImageTarget name="boardTag" size="0.090000 0.090000" />
+    <ImageTarget name="diceTag" size="0.060000 0.060000" />
   </Tracking>
 </QCARConfig>
