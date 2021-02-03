@@ -7,7 +7,7 @@ using Vuforia;
 
 public class VButtonChanceCard : MonoBehaviour
 {
-    public string cards_path = @"Textures\Cards\Front\Chance\";
+    public string cards_path = @"Textures/Cards/Front/Chance/";
 
     public GameObject vbBtnObj;
     public GameObject cardObj;
@@ -41,7 +41,7 @@ public class VButtonChanceCard : MonoBehaviour
         cardFrontObj.GetComponent<Renderer>().material = mat;
 
         // Load card's textures
-        string[] files = Directory.GetFiles(Path.Combine(Application.dataPath + @"\Resources\", cards_path), "*.jpg");
+        string[] files = Directory.GetFiles(Path.Combine(Application.dataPath + @"/Resources/", cards_path), "*.jpg");
 
         foreach (string file in files)
         {
