@@ -18,6 +18,6 @@ public class objectReplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        toModify.text = boardTag.GetComponent<Transform>().position.ToString();
+        toModify.text = (boardTag.GetComponent<Transform>().position-referenceTag.GetComponent<Transform>().position).ToString();
     }
 }
