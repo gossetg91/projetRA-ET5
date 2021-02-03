@@ -89,6 +89,12 @@ public class diceRoller : MonoBehaviour
         transform.localRotation = Quaternion.Euler(x, 0, y);
     }
 
+    public void startAnimation(){
+        if(this.stop!=false){
+            this.stop = false;
+        }
+    }
+
     public int getScore(){
         return score;
     }

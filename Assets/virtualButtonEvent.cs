@@ -22,8 +22,8 @@ public class virtualButtonEvent : MonoBehaviour
         Debug.Log("Button Pressed");
         diceRoller diceRollerScript1 = dice1.GetComponent<diceRoller>();
         diceRoller diceRollerScript2 = dice2.GetComponent<diceRoller>();
-        diceRollerScript1.stop = false;
-        diceRollerScript2.stop = false;
+        diceRollerScript1.startAnimation();
+        diceRollerScript2.startAnimation();
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)

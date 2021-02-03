@@ -392,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 823288093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0015999991, y: 0.001, z: 0.0010000002}
-  m_LocalScale: {x: 0.05, y: 0.06, z: 0.05}
+  m_LocalScale: {x: 0.04, y: 0.05, z: 0.04}
   m_Children: []
   m_Father: {fileID: 1730397437}
   m_RootOrder: 2
@@ -469,20 +469,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mName: diceButton
-  mSensitivity: 1
+  mSensitivity: 0
   mHasUpdatedPose: 1
   mPrevTransform:
-    e00: 0.05
+    e00: 0.04
     e01: 0
     e02: 0
     e03: 0.022400001
     e10: 0
-    e11: 0.06
+    e11: 0.05
     e12: 0
     e13: 0.001
     e20: 0
     e21: 0
-    e22: 0.05
+    e22: 0.04
     e23: -0.003
     e30: 0
     e31: 0
@@ -490,13 +490,13 @@ MonoBehaviour:
     e33: 1
   mPrevParent: {fileID: 1730397431}
   mPreviousVirtualSceneScaleFactor: 1
---- !u!43 &936836735
+--- !u!43 &880935069
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh20144
+  m_Name: ImageTargetMesh13956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -744,34 +744,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2033656497}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1511221743
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'diceTagMaterial
-
-    13964'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4fb1e0365d1e4178bb1f6dd8341b39f8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1539668300
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +943,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730397431}
-  m_Mesh: {fileID: 936836735}
+  m_Mesh: {fileID: 880935069}
 --- !u!23 &1730397433
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -990,7 +962,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1511221743}
+  - {fileID: 1889758767}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1094,6 +1066,34 @@ MonoBehaviour:
   vbBtnObj: {fileID: 823288093}
   dice1: {fileID: 1177904537}
   dice2: {fileID: 1965696953}
+--- !u!21 &1889758767
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'diceTagMaterial
+
+    13966'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 4fb1e0365d1e4178bb1f6dd8341b39f8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1942279690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1253,7 @@ MonoBehaviour:
   txt: {fileID: 1539668301}
   dice1: {fileID: 1177904537}
   dice2: {fileID: 1965696953}
+  score: 0
 --- !u!114 &1959994187
 MonoBehaviour:
   m_ObjectHideFlags: 0
