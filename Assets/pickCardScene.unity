@@ -995,7 +995,7 @@ MonoBehaviour:
   cards_path: Textures\Cards\Front\CommunityChest\
   vbBtnObj: {fileID: 29889291}
   cardObj: {fileID: 1641811887}
-  rotationSpeed: 0.25
+  rotationSpeed: 350
   textures: []
 --- !u!33 &900794558
 MeshFilter:
