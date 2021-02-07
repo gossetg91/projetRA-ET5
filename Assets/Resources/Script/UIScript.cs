@@ -14,6 +14,7 @@ public class UIScript : MonoBehaviour
     void Start()
     {
         ToggleMoneyMenu();
+        UpdateMoney();
     }
 
     // Update is called once per frame
@@ -27,11 +28,13 @@ public class UIScript : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+        UpdateMoney();
     }
 
     public void RemoveMoney(int amount)
     {
         money -= amount;
+        UpdateMoney();
     }
 
     public void Add200()
