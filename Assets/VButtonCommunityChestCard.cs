@@ -14,7 +14,7 @@ public class VButtonCommunityChestCard : MonoBehaviour
 
     public float rotationSpeed = 0.25f;
 
-    public List<string> textures = new List<string>();
+    public List<Object> textures = new List<Object>();
 
     private bool hasClicked = false;
     private bool isRotating = false;
@@ -40,17 +40,10 @@ public class VButtonCommunityChestCard : MonoBehaviour
         Material mat = new Material(Shader.Find("Unlit/Texture"));
         cardFrontObj.GetComponent<Renderer>().material = mat;
 
-        // Load card's textures
-        string[] files = Directory.GetFiles(Path.Combine(Application.dataPath + @"/Resources/", cards_path), "*.jpg");
-
-        foreach (string file in files)
-        {
-            FileInfo info = new FileInfo(file);
-            textures.Add(Path.GetFileNameWithoutExtension(info.Name));
-        }
+        Object [] texturesTMP = Resources.LoadAll(cards_path);
 
         // Shuffle cards
-        textures = textures.OrderBy(x => Random.value).ToList();
+        textures = texturesTMP.OrderBy(x => Random.value).ToList();
 
         // Init button
         vbBtnObj = GameObject.Find("VButtonCommunityChestCard");
@@ -93,7 +86,7 @@ public class VButtonCommunityChestCard : MonoBehaviour
 
             cardBackObj.SetActive(true);
 
-            Texture texture = Resources.Load(cards_path + textures[nbCardsPicked % textures.Count]) as Texture;
+            Texture texture = textures[nbCardsPicked % textures.Count] as Texture;
             
             if(texture) cardFrontObj.GetComponent<Renderer>().material.mainTexture = texture;
             else Debug.LogError("Unable to load front card texture");

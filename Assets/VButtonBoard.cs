@@ -12,7 +12,7 @@ public class VButtonBoard : MonoBehaviour
     public GameObject vbBtnObj;
     public GameObject boardObj;
 
-    public List<string> textures = new List<string>();
+    public List<Object> textures = new List<Object>();
 
     private int cpt = 0;
 
@@ -23,13 +23,11 @@ public class VButtonBoard : MonoBehaviour
         boardObj.GetComponent<Renderer>().material = mat;
 
         // Load board's textures
-        string[] files = Directory.GetFiles(Path.Combine(Application.dataPath + @"/Resources/", boards_path), "*.jpg");
+        Object [] texturesTMP = Resources.LoadAll(boards_path);
 
-        foreach(string file in files)
-        {
-            FileInfo info = new FileInfo(file);
-            textures.Add(Path.GetFileNameWithoutExtension(info.Name));
-        }
+        // Shuffle cards
+        textures = texturesTMP.OrderBy(x => Random.value).ToList();
+
 
         // Init button
         vbBtnObj = GameObject.Find("VButtonBoard");
@@ -50,7 +48,7 @@ public class VButtonBoard : MonoBehaviour
     }
 
     private void changeBoardTexture() {
-        Texture texture = Resources.Load(boards_path + textures[cpt % textures.Count]) as Texture;
+        Texture texture = textures[cpt % textures.Count] as Texture;
             
         if(texture) boardObj.GetComponent<Renderer>().material.mainTexture = texture;
         else Debug.LogError("Unable to load board texture");
