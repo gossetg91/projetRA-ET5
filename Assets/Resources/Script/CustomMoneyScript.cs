@@ -14,12 +14,12 @@ public class CustomMoneyScript : MonoBehaviour
     void Start()
     {
         addButton.onClick.AddListener(() => {
-            int n;
-            if (int.TryParse(inputMoney.text, out n)) UICanvas.GetComponent<UIScript>().AddMoney(n); 
+            float n;
+            if (float.TryParse(inputMoney.text, out n)) UICanvas.GetComponent<UIScript>().AddMoney(n); 
         } );
         removeButton.onClick.AddListener(() => {
-            int n;
-            if (int.TryParse(inputMoney.text, out n)) UICanvas.GetComponent<UIScript>().RemoveMoney(n); 
+            float n;
+            if (float.TryParse(inputMoney.text, out n)) UICanvas.GetComponent<UIScript>().RemoveMoney(n); 
         } );
     }
 
